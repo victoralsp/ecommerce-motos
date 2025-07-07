@@ -7,7 +7,7 @@
 
     border-radius: 40px;
     background: #262626;
-    background: radial-gradient(circle, rgba(38, 38, 38, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(38, 38, 38, 1) 0%, #000000 100%);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.404);
     overflow: hidden;
 
@@ -24,13 +24,13 @@
         color: #727272;
         text-transform: uppercase;
         transform: translateY(-120px);
-        mix-blend-mode: difference;
         filter: drop-shadow(0 0 10px rgba(31, 31, 31, 0.281));
     }
 
     img {
-        width: 750px;
-        transform: rotate(3deg);
+        width: 720px;
+        transform: rotate(2deg) translateY(-20px);
+        margin-bottom: 2em;
         filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.575));
     }
 }

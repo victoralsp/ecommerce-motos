@@ -1,17 +1,20 @@
 .ContainerPositionSlider {
-    width: 270px;
+    width: 280px;
     height: 45px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.055);
+    position: absolute;
+    bottom: 12em;
+    z-index: 9999;
 
         button {
-            background-color: #838383;
+            background-color: #242424;
             font-size: .9em;
             color: #222222;
             border: none;
@@ -24,11 +27,18 @@
             height: 30px;
         }
 
+        .btnVoltarSlide {
+            padding-right: .1em;
+        }
+        .btnPassarrSlide {
+            padding-left: .1em;
+        }
+
         .dotMudarSlide {
-            background-color: rgb(255, 255, 255);
+            background-color: #242424;
             color: white;
-            width: 20px;
-            height: 20px;
+            width: 23px;
+            height: 23px;
             border-radius: 50%;
             cursor: pointer;
             transition: .5s ease;
@@ -38,7 +48,7 @@
             background-color: rgb(255, 255, 255);
             color: white;
             width: 40px;
-            height: 20px;
+            height: 23px;
             border-radius: 50px;
             cursor: pointer;
         }

@@ -6,7 +6,7 @@ import { FaLessThan, FaGreaterThan } from "react-icons/fa";
 export default function PosicaoItensCarrossel({ voltarSlide, passarSlide, infosMotosCarrossel, mudarPeloDot, indexAtual }) {
     return (
         <div className={styles.ContainerPositionSlider}>
-            <button onClick={voltarSlide}><FaLessThan /></button>
+            <button onClick={voltarSlide} className={styles.btnVoltarSlide} style={{ color: infosMotosCarrossel[indexAtual].corTexto }}><FaLessThan /></button>
 
             {infosMotosCarrossel.map((slide, slideIndex) => (
                 <div key={slideIndex} onClick={() => mudarPeloDot(slideIndex)}>
@@ -17,7 +17,7 @@ export default function PosicaoItensCarrossel({ voltarSlide, passarSlide, infosM
                     </div>
                 </div>
             ))}
-            <button onClick={passarSlide}><FaGreaterThan /></button>
+            <button onClick={passarSlide} className={styles.btnPassarSlide} style={{ color: infosMotosCarrossel[indexAtual].corTexto }}><FaGreaterThan /></button>
         </div>
     )
 }
