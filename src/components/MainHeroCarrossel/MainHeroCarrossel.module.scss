@@ -44,17 +44,49 @@
 }
 
 
+    // animações 
 
-
-.entrada {
-  animation: slideIn 1s ease forwards;
+.entrada-next {
+  animation: slideInLeft 1.1s ease forwards;
 }
 
-.saida {
-  animation: slideOut 1s ease forwards;
+.saida-next {
+  animation: slideOutRight 1.1s ease forwards;
 }
 
-@keyframes slideIn {
+
+.entrada-prev {
+  animation: slideInRight 1.1s ease forwards;
+}
+
+.saida-prev {
+  animation: slideOutLeft 1.1s ease forwards;
+}
+
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(800px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-800px);
+  }
+}
+
+@keyframes slideInRight {
   from {
     opacity: 0;
     transform: translateX(-800px);
@@ -65,7 +97,7 @@
   }
 }
 
-@keyframes slideOut {
+@keyframes slideOutLeft {
   from {
     opacity: 1;
     transform: translateX(0);

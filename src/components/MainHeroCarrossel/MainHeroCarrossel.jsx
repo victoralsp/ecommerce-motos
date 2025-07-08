@@ -34,29 +34,37 @@ export default function MainHeroCarrossel() {
 
     const [indexAtual, setIndexAtual] = useState(0)
     const [animacao, setAnimacao] = useState('')
+    const [direcao, setDirecao] = useState("")
 
-    const trocarSlideComAnimacao = (novoIndex) => {
+
+    const trocarSlide = (novoIndex, direcaoClicada) => {
+        setDirecao(direcaoClicada);
         setAnimacao("saida");
+
         setTimeout(() => {
             setIndexAtual(novoIndex);
             setAnimacao("entrada");
-        }, 300); 
+        }, 300);
     };
+
 
     const prevSlide = () => {
         const primeiroSlide = indexAtual === 0
         const novoIndex = primeiroSlide ? infosMotosCarrossel.length - 1 : indexAtual - 1
-        trocarSlideComAnimacao(novoIndex)
+        trocarSlide(novoIndex, 'next')
     }
 
     const nextSlide = () => {
         const ultimoSlide = indexAtual === infosMotosCarrossel.length - 1
         const novoIndex = ultimoSlide ? 0 : indexAtual + 1
-        trocarSlideComAnimacao(novoIndex)
+        trocarSlide(novoIndex, 'prev')
     }
 
     const mudarPeloDot = (slideIndex) => {
-        trocarSlideComAnimacao(slideIndex)
+        if (slideIndex === indexAtual) return
+
+        const direcaoClicada = slideIndex > indexAtual ? "prev" : "next";
+        trocarSlide(slideIndex, direcaoClicada)
     }
 
     return (
@@ -65,7 +73,7 @@ export default function MainHeroCarrossel() {
             <img 
                 src={infosMotosCarrossel[indexAtual].url}  
                 style={{ width: infosMotosCarrossel[indexAtual].widthImg }}  
-                className={`${styles.imagemMotoCarrossel} ${styles[animacao]}`}
+                className={`${styles.imagemMotoCarrossel} ${styles[`${animacao}-${direcao}`]}`}
                 alt="foto da moto"
             />
             <PosicaoItensCarrossel
