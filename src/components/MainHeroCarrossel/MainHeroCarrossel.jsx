@@ -9,34 +9,34 @@ import PosicaoItensCarrossel from "../PosicaoItensCarrossel/PosicaoItensCarrosse
 export default function MainHeroCarrossel() {
 
     const infosMotosCarrossel = [
-        {
+       {
             url: imgFazer150,
             widthImg: '720px',
             nomeMoto: 'Fazer 150',
-            corTexto: '#727272',
-            bgColor: 'radial-gradient(circle, rgba(38, 38, 38, 1) 0%,rgb(0, 0, 0) 100%)'
+            corTexto: '#5e5e5e', 
+            bgColor: 'radial-gradient(circle, rgba(58, 58, 58, 1) 0%, rgb(0, 0, 0) 100%)'
         },
         {
             url: imgNs160,
             widthImg: '690px',
             nomeMoto: 'BAJAJ NS 160',
-            corTexto: '#b5292c',
-            bgColor: 'radial-gradient(circle, rgba(181, 41, 44, 1) 0%, rgb(0, 0, 0) 100%)'
+            corTexto: '#9e2427', 
+            bgColor: 'radial-gradient(circle, rgb(98, 26, 27) 0%, rgb(0, 0, 0) 100%)'
         },
         {
             url: imgCg160,
             nomeMoto: 'CG 160 TITAN',
             widthImg: '900px',
-            corTexto: '#f97109',
-            bgColor: 'radial-gradient(circle, rgba(249, 113, 9, 1) 0%, rgb(0, 0, 0) 100%)'
+            corTexto: '#dc6308', 
+            bgColor: 'radial-gradient(circle, rgb(113, 58, 23) 0%, rgb(0, 0, 0) 100%)'
         },
         {
             url: imgDr160s,
             nomeMoto: 'Dr 160s haojue',
             widthImg: '750px',
-            corTexto: '#d4d4d4',
-            bgColor: 'radial-gradient(circle, rgba(218, 218, 217, 1) 0%, rgba(0, 0, 0, 1) 100%)'
-        },
+            corTexto: '#b0b0b0', 
+            bgColor: 'radial-gradient(circle, rgb(108, 108, 108) 0%, rgba(0, 0, 0, 1) 100%)'
+        }
     ]
 
     const [indexAtual, setIndexAtual] = useState(0)
