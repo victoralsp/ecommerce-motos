@@ -11,14 +11,12 @@ export default function MainHeroCarrossel() {
     const infosMotosCarrossel = [
        {
             url: imgFazer150,
-            widthImg: '720px',
             nomeMoto: 'Fazer 150',
             corTexto: '#5e5e5e', 
             bgColor: 'radial-gradient(circle, rgba(58, 58, 58, 1) 0%, rgb(0, 0, 0) 100%)'
         },
         {
             url: imgNs160,
-            widthImg: '690px',
             nomeMoto: 'BAJAJ NS 160',
             corTexto: '#9e2427', 
             bgColor: 'radial-gradient(circle, rgb(98, 26, 27) 0%, rgb(0, 0, 0) 100%)'
@@ -26,14 +24,12 @@ export default function MainHeroCarrossel() {
         {
             url: imgCg160,
             nomeMoto: 'CG 160 TITAN',
-            widthImg: '900px',
             corTexto: '#dc6308', 
             bgColor: 'radial-gradient(circle, rgb(113, 58, 23) 0%, rgb(0, 0, 0) 100%)'
         },
         {
             url: imgDr160s,
             nomeMoto: 'Dr 160s haojue',
-            widthImg: '750px',
             corTexto: '#b0b0b0', 
             bgColor: 'radial-gradient(circle, rgb(108, 108, 108) 0%, rgba(0, 0, 0, 1) 100%)'
         }
@@ -81,12 +77,13 @@ export default function MainHeroCarrossel() {
                 className={`${styles.textoCarrossel} ${styles[`animacaoTexto-${animacao}-${direcao}`]}`}>
                 {infosMotosCarrossel[indexAtual].nomeMoto}
             </p>
-            <img
+            <a href="#">
+                <img
                 src={infosMotosCarrossel[indexAtual].url}
-                style={{ width: infosMotosCarrossel[indexAtual].widthImg }}
                 className={`${styles.imagemMotoCarrossel} ${styles[`${animacao}-${direcao}`]}`}
                 alt="foto da moto"
             />
+            </a>
             <PosicaoItensCarrossel
                 passarSlide={nextSlide}
                 voltarSlide={prevSlide}

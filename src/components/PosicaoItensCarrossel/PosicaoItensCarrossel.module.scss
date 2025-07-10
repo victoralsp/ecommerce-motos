@@ -55,8 +55,21 @@
     }
 
 
-// @media screen and (max-width: 1366px) {
-//     .ContainerPositionSlider {
-//         bottom: 15vh;
-//     }
-// }
+@media screen and (max-width: 1366px) {
+    .ContainerPositionSlider {
+        width: 200px;
+        height: 35px;
+        bottom: 15vh;
+
+        button {
+            width: 20px;
+            height: 20px;
+            font-size: .5em;
+        }
+
+        .dotMudarSlide {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
