@@ -19,7 +19,7 @@
     p {
         font-family: 'League Spartan';
         font-weight: bolder;
-        font-size: 13em;
+        font-size: 11em;
         position: absolute;
         color: #727272;
         text-transform: uppercase;
@@ -144,7 +144,29 @@
     }
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1100px) {
+  .articleMainHeroCarrossel {
+    p {
+      font-size: 7em;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .articleMainHeroCarrossel {
+    p {
+      font-size: 5em;
+    }
+  }
+}
+@media screen and (max-width: 675px) {
+  .articleMainHeroCarrossel {
+    p {
+      font-size: 4em;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
   .articleMainHeroCarrossel {
     p {
       font-size: 5em;
