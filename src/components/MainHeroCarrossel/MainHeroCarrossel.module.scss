@@ -28,6 +28,7 @@
         text-align: center;
         max-width: 95%;
         margin: 0 auto;
+        -webkit-box-reflect: below .3em linear-gradient(to bottom, transparent, rgba(255,255,255,0.2));
     }
 
     img {
