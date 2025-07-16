@@ -161,15 +161,13 @@
 @media screen and (max-width: 675px) {
   .articleMainHeroCarrossel {
     p {
-      font-size: 4em;
+      font-size: 5em;
     }
   }
 }
 
 @media screen and (max-width: 500px) {
   .articleMainHeroCarrossel {
-    p {
-      font-size: 5em;
-    }
+    height: 70svh;
   }
 }

@@ -71,5 +71,21 @@
             width: 20px;
             height: 20px;
         }
+
+        .dotAtivo {
+            background-color: #d4d4d4;
+            color: white;
+            width: 35px;
+            height: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .ContainerPositionSlider {
+        bottom: 28vh;
     }
 }
