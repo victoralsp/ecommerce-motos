@@ -139,6 +139,8 @@
 
 @media screen and (max-width: 1366px) {
   .articleMainHeroCarrossel {
+    height: 75dvh;
+
     p {
       font-size: 8em;
     }
@@ -172,7 +174,6 @@
 
 @media screen and (max-width: 500px) {
   .articleMainHeroCarrossel {
-    height: 75dvh;
     padding-top: 5em;
   }
 }

@@ -83,12 +83,18 @@
     }
 }
 
+@media screen and (max-width: 1366px) {
+    .ContainerPositionSlider {
+        bottom: 20dvh;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .ContainerPositionSlider {
         bottom: 25dvh;
     }
 }
+
 
 @media screen and (max-width: 320px) {
     .ContainerPositionSlider {
