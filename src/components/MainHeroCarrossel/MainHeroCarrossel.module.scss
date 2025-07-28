@@ -1,7 +1,7 @@
 .articleMainHeroCarrossel {
     // max-width: 1800px;
     width: 95%;
-    height: 80svh;
+    height: 80dvh;
     background-color: red;
     margin: .0 auto;
 
@@ -168,7 +168,7 @@
 
 @media screen and (max-width: 500px) {
   .articleMainHeroCarrossel {
-    height: 70svh;
+    height: 70dvh;
     padding-top: 5em;
   }
 }
