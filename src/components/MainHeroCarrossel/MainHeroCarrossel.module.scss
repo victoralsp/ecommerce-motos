@@ -172,3 +172,14 @@
     padding-top: 5em;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .articleMainHeroCarrossel {
+    height: 65dvh;
+    padding-top: 5em;
+
+      p {
+        font-size: 3.8em;
+      }
+  }
+}

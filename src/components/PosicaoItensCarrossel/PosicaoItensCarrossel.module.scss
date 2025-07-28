@@ -89,3 +89,9 @@
         bottom: 25dvh;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .ContainerPositionSlider {
+        bottom: 20dvh;
+    }
+}
