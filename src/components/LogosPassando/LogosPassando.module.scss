@@ -6,3 +6,13 @@
         filter: brightness(0) invert(.2);
     }
 }
+
+@media screen and (max-width: 500px) {
+  .ArticleLogosPassando {
+        img {
+            height: 25px;
+            margin: 2em 1em;
+            filter: brightness(0) invert(.8);
+        }
+    }
+}
