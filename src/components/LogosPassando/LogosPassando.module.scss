@@ -1,26 +1,26 @@
 .ArticleLogosPassando {
     img {
-        height: 25px;
+        height: 20px;
         margin: 2.5em 2em;
-        filter: brightness(0) invert(.8);
+        filter: brightness(0) invert(.2);
     }
 }
 
 @media screen and (max-width: 1366px) {
   .ArticleLogosPassando {
         img {
-            height: 25px;
-            margin: 1.5em 1em;
-            filter: brightness(0) invert(.8);
+            height: 15px;
+            margin: 2em 1em;
+            filter: brightness(0) invert(.2);
         }
     }
 }
 @media screen and (max-width: 500px) {
   .ArticleLogosPassando {
         img {
-            height: 25px;
-            margin: 2em 1em;
-            filter: brightness(0) invert(.8);
+            height: 15px;
+            margin: 2.5em 1em;
+            filter: brightness(0) invert(.2);
         }
     }
 }
