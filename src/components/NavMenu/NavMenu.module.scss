@@ -21,12 +21,37 @@
         li {
             list-style: none;
 
-            a {
+           a {
                 text-decoration: none;
                 font-family: "Lato", sans-serif;
                 font-size: 1em;
                 color: #d4d4d4;
                 font-weight: 600;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s ease all;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: -5px;
+                    left: 0;
+                    background-color: #858585;
+                    transform-origin: bottom right;
+                    transition: transform 0.5s ease-out;
+                }
+
+                &:hover {
+                    color: #858585;
+
+                    &::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                    }
+                }
             }
         }
     }

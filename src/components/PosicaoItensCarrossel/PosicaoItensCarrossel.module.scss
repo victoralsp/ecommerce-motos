@@ -57,9 +57,28 @@
 
 @media screen and (max-width: 1366px) {
     .ContainerPositionSlider {
+        bottom: 20dvh;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1365px) {
+    .ContainerPositionSlider {
+        bottom: 30dvh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ContainerPositionSlider {
+        bottom: 22dvh;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .ContainerPositionSlider {
         width: 200px;
         height: 35px;
-        bottom: 15vh;
+        bottom: 18vh;
 
         button {
             width: 20px;
@@ -80,24 +99,5 @@
             border-radius: 50px;
             cursor: pointer;
         }
-    }
-}
-
-@media screen and (max-width: 1366px) {
-    .ContainerPositionSlider {
-        bottom: 20dvh;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .ContainerPositionSlider {
-        bottom: 25dvh;
-    }
-}
-
-
-@media screen and (max-width: 320px) {
-    .ContainerPositionSlider {
-        bottom: 20dvh;
     }
 }
