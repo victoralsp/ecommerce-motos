@@ -19,7 +19,7 @@
         justify-content: space-evenly;
 
         li {
-            list-style: none;
+            list-style: none;   
 
            a {
                 text-decoration: none;
@@ -31,26 +31,11 @@
                 position: relative;
                 transition: 0.5s ease all;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    transform: scaleX(0);
-                    height: 2px;
-                    bottom: -5px;
-                    left: 0;
-                    background-color: #858585;
-                    transform-origin: bottom right;
-                    transition: transform 0.5s ease-out;
-                }
 
                 &:hover {
-                    color: #858585;
-
-                    &::after {
-                    transform: scaleX(1);
-                    transform-origin: bottom left;
-                    }
+                    color: #fff;
+                    font-size: 1.05em;
+                    padding: 0 1em;
                 }
             }
         }
