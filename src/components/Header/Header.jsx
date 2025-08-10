@@ -4,6 +4,7 @@ import Logo from '../Logo/Logo';
 import NavMenu from '../NavMenu/NavMenu';
 import BotaoCatalogo from '../BotaoCatalogo/BotaoCatalogo';
 import IconeMenu from '../IconeMenu/IconeMenu';
+import { Link } from 'react-router-dom';
 
 export default function Header()  {
 
@@ -15,7 +16,9 @@ export default function Header()  {
 
   return (
     <header className={styles.header}> 
-    <Logo width="70px"/>
+    <Link to="/">
+      <Logo width="70px"/>
+    </Link>
     <NavMenu isOpen={menuAberto}/>
     <BotaoCatalogo/>
     <IconeMenu onToggleMenu={toggleMenu} isOpen={menuAberto}/>

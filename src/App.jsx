@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import './App.scss'
-import Header from './components/Header/Header.jsx'
-import Main from './components/Main/Main.jsx'
+import Home from './pages/Home/Home.jsx'
+import Catalogo from './pages/Catalogo/Catalogo.jsx'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 
 function App() {
-
   return (
-    <>
-      <Header/>
-      <Main/>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalogo" element={<Catalogo />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App
