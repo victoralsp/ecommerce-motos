@@ -64,9 +64,19 @@
 
        ul {
         flex-direction: column;
-        gap: 1.5em
-       }
+        gap: 1.5em;
+
+        li {  
+           a {
+                &:hover {
+                    color: #fff;
+                    font-size: 1.05em;
+                    padding:  .5em 0;
+                }
+            }
+        }
     }
+}
 
       .NavBar.open {
         display: block; 

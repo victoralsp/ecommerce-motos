@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from './MainHeroCarrossel.module.scss';
-import imgFazer150 from '../../assets/imagens/fazer150.png';
-import imgCg160 from '../../assets/imagens/cg160.png';
-import imgNs160 from '../../assets/imagens/ns160.png';
-import imgDr160s from '../../assets/imagens/dr160s.png';
+import imgFazer150 from '../../../../assets/imagens/fazer150.png';
+import imgCg160 from '../../../../assets/imagens/cg160.png';
+import imgNs160 from '../../../../assets/imagens/ns160.png';
+import imgDr160s from '../../../../assets/imagens/dr160s.png';
 import PosicaoItensCarrossel from "../PosicaoItensCarrossel/PosicaoItensCarrossel";
 
 export default function MainHeroCarrossel() {

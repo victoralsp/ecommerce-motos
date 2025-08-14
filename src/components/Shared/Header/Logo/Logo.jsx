@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Logo.module.scss';
-import logoIcon from '../../assets/icones/logoUrbanDrive.png'; 
+import logoIcon from '../../../../assets/icones/logoUrbanDrive.png';
 
 export default function Logo({width = "100px"})  {
 
