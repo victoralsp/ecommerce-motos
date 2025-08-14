@@ -53,7 +53,8 @@
 
 @media screen and (max-width: 600px) {
     .NavBar {
-       display: none;
+        pointer-events: none;
+        opacity: 0;
        position: absolute;
        width: max-content;
        text-align: right;
@@ -61,7 +62,9 @@
        padding: 2em;
        right: 0;
        top: 5.4em;
-
+       transform: translateX(200px);
+       transition: 1s ease;
+       
        ul {
         flex-direction: column;
         gap: 1.5em;
@@ -78,7 +81,9 @@
     }
 }
 
-      .NavBar.open {
-        display: block; 
+.NavBar.open {
+        transform: translateX(3px);
+        pointer-events: all;
+        opacity: 1;
   }
 }
