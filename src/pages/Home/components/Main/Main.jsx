@@ -4,7 +4,7 @@ import LogosPassando from "../../../../components/Shared/LogosPassando/LogosPass
 import styles from './Main.module.scss';
 
 import LogoBajaj from "../../../../assets/imagens/bajaj-logo.png";
-import LogoHaojue from "../../../../assets/imagens/logo-Haojue.png";
+import LogoHaojue from "../../../../assets/imagens/Logo-Haojue.png";
 import LogoHonda from "../../../../assets/imagens/honda_logo.png";
 import LogoYamaha from "../../../../assets/imagens/yamaha-logo.png";
 
