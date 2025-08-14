@@ -6,10 +6,11 @@ import Breadcrumbs from "../../components/Shared/Breadcrumbs/Breadcrumbs.jsx";
 export default function Catalogo() {
 
     return (
-        <>  
+        <body className={styles.bodyCatalogo}>  
             <Header/>
             <Breadcrumbs />
+            <div></div>
             
-        </>
+        </body>
     )
 }
