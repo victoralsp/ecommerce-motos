@@ -1,9 +1,12 @@
 .header {
     max-width: 1300px;
     width: 95%;
-    margin: .5em auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: .5em; 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     z-index: 99999999;
 }
