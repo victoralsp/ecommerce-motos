@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./ContainerMenuLateral.module.scss";
 import BuscarLocalizacao from "../BuscarLocalizacao/BuscarLocalizacao";
 import IconeMenuLateral from "../IconeMenuLateral/IconeMenuLateral";
@@ -9,10 +10,24 @@ import FiltrarPorMarcas from "../FiltrarPorMarcas/FiltrarPorMarcas";
 
 export default function ContainerMenuLateral() {
 
+    const [menuAberto, setMenuAberto] = useState(false)
+
+    const alternarMenu = () => {
+        setMenuAberto(!menuAberto)
+    }
+
+    const containerMenuLateral = `${styles.containerMenuLateral} ${menuAberto ? styles.containerMenuLateralFechado : ''}`
+    const widthControllerMenu = `${styles.widthControllerMenuLateral} ${menuAberto ? styles.widthControllerMenuLateralFechado : ''}`
+
+
     return (
-        <article className={styles.containerMenuLateral}>
-            <div className={styles.widthControllerMenuLateral}>
-                <IconeMenuLateral/>
+        <article className={containerMenuLateral}>
+                <IconeMenuLateral 
+                    alterarEstadoMenu={alternarMenu}
+                    menuAberto={menuAberto}
+                    setMenuAberto={setMenuAberto}
+                />
+            <div className={widthControllerMenu}>
                 <BuscarLocalizacao/>
                 <OpcaoNovaOuUsada/>
                 <FiltrarMinimoMaximo
