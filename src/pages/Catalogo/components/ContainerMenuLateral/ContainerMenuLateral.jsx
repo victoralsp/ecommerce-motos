@@ -3,7 +3,7 @@ import styles from "./ContainerMenuLateral.module.scss";
 import BuscarLocalizacao from "../BuscarLocalizacao/BuscarLocalizacao";
 import IconeMenuLateral from "../IconeMenuLateral/IconeMenuLateral";
 import OpcaoNovaOuUsada from "../OpcaoNovaOuUsada/OpcaoNovaOuUsada";
-import PrecoMinimoMaximo from "../PrecoMinimoMaximo/PrecoMinimoMaximo";
+import FiltrarMinimoMaximo from "../FiltrarMinimoMaximo/FiltrarMinimoMaximo";
 import FiltrarPorMarcas from "../FiltrarPorMarcas/FiltrarPorMarcas";
 
 
@@ -15,8 +15,17 @@ export default function ContainerMenuLateral() {
                 <IconeMenuLateral/>
                 <BuscarLocalizacao/>
                 <OpcaoNovaOuUsada/>
-                <PrecoMinimoMaximo/>
+                <FiltrarMinimoMaximo
+                    funcaoSubtitulo='Preço' 
+                    nomeIntervaloMinimo='Preço mínimo' 
+                    nomeIntervaloMaximo='Preço máximo'
+                />
                 <FiltrarPorMarcas/>
+                <FiltrarMinimoMaximo
+                    funcaoSubtitulo='Ano' 
+                    nomeIntervaloMinimo='Ano mínimo' 
+                    nomeIntervaloMaximo='Ano máximo'
+                />
             </div>
         </article>
     )

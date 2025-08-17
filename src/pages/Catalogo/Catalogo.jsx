@@ -12,6 +12,7 @@ export default function Catalogo() {
             <main>
             <Breadcrumbs />
             <ContainerMenuLateral/>
+            <div className={styles.teste}></div>
             </main>
             
         </body>
