@@ -1,0 +1,32 @@
+.PrecoMinimoMaximo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1.5em 0;
+
+    h3 {
+        font-size: 1.4rem;
+        letter-spacing: .5px;
+        margin: 0 0 .5em 0;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            height: 40px;
+            width: 180px;
+            border-radius: 5px;
+            background-color: #cacaca;
+            border: 1px solid #cacaca;
+            outline: none;
+            padding: 1em; 
+
+        }
+        ::-webkit-input-placeholder  { color: #1f1f1f; }
+        input:-moz-placeholder { color: #1f1f1f; }
+        textarea:-moz-placeholder { color: #1f1f1f; }
+    }
+
+}

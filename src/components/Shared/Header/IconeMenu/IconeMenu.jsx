@@ -10,7 +10,7 @@ export default function IconeMenu({ onToggleMenu, isOpen }) {
             className={styles.IconeMenu} 
             onClick={onToggleMenu}
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
-            >{isOpen ?  <CgClose/> : <TbMenuDeep/>
-}</button>
+            >{isOpen ?  <CgClose/> : <TbMenuDeep/>}
+        </button>
     )
 }

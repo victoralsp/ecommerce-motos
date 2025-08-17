@@ -1,0 +1,22 @@
+.containerMenuLateral {
+    width: 450px;
+    // height: 50vh;
+    border: 1px solid white;
+    color: #d4d4d4;
+
+    .widthControllerMenuLateral {
+        width: 85%;
+        margin: 2.063em auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        letter-spacing: .5px;
+        margin: .5em 0;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
