@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Header.module.scss';
 import Logo from './Logo/Logo';
 import NavMenu from './NavMenu/NavMenu';
@@ -14,15 +14,38 @@ export default function Header()  {
     setMenuAberto(!menuAberto)
   }
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+
+    const headerClass = `${styles.header} ${scrolled ? styles.headerScrolled : ''}`
+    const headerClassContainer = `${styles.headerContainer} ${scrolled ? styles.headerContainerScrolled : ''}`
+
   return (
-    <header className={styles.header}> 
-    <Link to="/">
-      <Logo width="70px"/>
-    </Link>
-    <NavMenu isOpen={menuAberto}/>
-    <BotaoCatalogo/>
-    <IconeMenu onToggleMenu={toggleMenu} isOpen={menuAberto}/>
-    </header>
+    <header className={headerClass}>
+        <div className={headerClassContainer}>
+          <Link to="/">
+            <Logo width="70px"/>
+          </Link>
+          <NavMenu isOpen={menuAberto}/>
+          <BotaoCatalogo/>
+          <IconeMenu onToggleMenu={toggleMenu} isOpen={menuAberto}/>
+        </div>
+      </header>
   );
 };
 
