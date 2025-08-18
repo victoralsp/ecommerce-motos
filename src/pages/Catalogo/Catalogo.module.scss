@@ -2,7 +2,7 @@
     overflow-x: hidden;
 
     .teste {
-        width: 75%;
+        width: 74%;
         margin-left: auto;
         position: absolute;
         right: 0;
@@ -12,6 +12,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 1.5em;
+        border: 1px solid white;
         
 
         div {
