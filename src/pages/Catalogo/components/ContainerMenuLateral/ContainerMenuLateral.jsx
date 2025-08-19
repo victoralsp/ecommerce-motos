@@ -8,13 +8,8 @@ import FiltrarMinimoMaximo from "../FiltrarMinimoMaximo/FiltrarMinimoMaximo";
 import FiltrarPorMarcas from "../FiltrarPorMarcas/FiltrarPorMarcas";
 
 
-export default function ContainerMenuLateral() {
+export default function ContainerMenuLateral({ menuAberto, setMenuAberto, alternarMenu }) {
 
-    const [menuAberto, setMenuAberto] = useState(false)
-
-    const alternarMenu = () => {
-        setMenuAberto(!menuAberto)
-    }
 
     const containerMenuLateral = `${styles.containerMenuLateral} ${menuAberto ? styles.containerMenuLateralFechado : ''}`
     const widthControllerMenu = `${styles.widthControllerMenuLateral} ${menuAberto ? styles.widthControllerMenuLateralFechado : ''}`
