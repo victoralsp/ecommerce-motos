@@ -4,6 +4,7 @@ import styles from './Catalogo.module.scss';
 import Header from "../../components/Shared/Header/Header.jsx";
 import Breadcrumbs from "../../components/Shared/Breadcrumbs/Breadcrumbs.jsx";
 import ContainerMenuLateral from "./components/ContainerMenuLateral/ContainerMenuLateral.jsx";
+import ResultadosEncontrados from "./components/resultadosEncontrados/ResultadosEncontrados.jsx";
 
 export default function Catalogo() {
 
@@ -25,58 +26,15 @@ export default function Catalogo() {
                 setMenuAberto={setMenuAberto}
                 alternarMenu={alternarMenu}
             />
-            <div className={containerCatalogo}>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <section className={containerCatalogo}>
+                <section className={styles.catalogoControles}>
+                    <div className={styles.qtdEncontradosEFiltrarPor}>
+                        <ResultadosEncontrados/>
+                        <span>/</span>
+
+                    </div>
+                </section>
+            </section>
             </main>
             
         </body>

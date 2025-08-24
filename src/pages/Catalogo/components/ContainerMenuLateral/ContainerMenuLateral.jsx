@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import styles from "./ContainerMenuLateral.module.scss";
 import BuscarLocalizacao from "../BuscarLocalizacao/BuscarLocalizacao";
 import IconeMenuLateral from "../IconeMenuLateral/IconeMenuLateral";

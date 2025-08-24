@@ -1,11 +1,13 @@
 .breadcrumbs {
-    width: 93%;
+    width: 100%;
     margin: 0 auto;
     font-family: 'League Spartan';
-    padding: .5em 0;
+    padding: 1.1em 0 1.1em 4.188em;
     position: fixed;
-    left: 4.188em;
-    top: 6.25em;
+    top: 5.4em;
+    // background: linear-gradient(to right, #141414 0%, #0e0e0e 100%);
+    background-color: #141414;
+    z-index: 9999999;
 
     ol {
          display: flex;
