@@ -4,7 +4,7 @@ import styles from './Catalogo.module.scss';
 import Header from "../../components/Shared/Header/Header.jsx";
 import Breadcrumbs from "../../components/Shared/Breadcrumbs/Breadcrumbs.jsx";
 import ContainerMenuLateral from "./components/ContainerMenuLateral/ContainerMenuLateral.jsx";
-import ResultadosEncontrados from "./components/resultadosEncontrados/ResultadosEncontrados.jsx";
+import ResultadosEncontrados from "./components/ResultadosEncontrados/ResultadosEncontrados.jsx";
 
 export default function Catalogo() {
 
