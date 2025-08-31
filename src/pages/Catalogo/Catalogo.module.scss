@@ -18,17 +18,51 @@
         
 
         .qtdEncontradosEFiltrarPor {
+            font-family: "Montserrat", sans-serif;
             display: flex;
+            justify-content: space-between;
             flex-direction: row;
             align-items: center;
-            gap: 1.5em;
+
+            padding-bottom: 5000px;
+            
+            .containerFiltrosDireita, 
+            .containerFiltrosEsquerda {
+                display: flex;
+                gap: 1.5em;
+                align-items: center;
+            }
 
             span {
                 color: #d4d4d4; 
                 font-weight: bolder;
-                font-size: 1.5em;
-                transform: translateY(3px);
+                font-size: 1.2em;
             }
+
+            .containerFavoritos {
+                position: relative;
+
+                .iconeFavoritos {
+                    color: rgb(161, 40, 40);
+                    font-size: 2em;
+                    margin-right: .5em;
+                }
+
+                p {
+                    font-size: .9em;
+                    border-radius: 50%;
+                    text-align: center;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #d4d4d4;
+                    position: absolute;
+                    right: 0;
+                    top: -1em;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 800;
+                }
+            }
+            
         }
     }
 

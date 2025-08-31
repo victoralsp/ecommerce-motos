@@ -1,0 +1,31 @@
+.containerOrdenarPor {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+
+    .iconeOrdenarPor {
+        color: #fff;
+        font-size: 1.4em;
+        transform: rotate(90deg);
+    }
+
+    label {
+        color: #d4d4d4;
+        font-size: 1.1em;
+        margin: 0 .5em;
+        
+        select {
+            font-size: 1em;
+            background-color: transparent;
+            font-family: "Montserrat", sans-serif;
+            color: #d4d4d4;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-weight: 600;
+            margin-left: .5em;
+            padding-right: .3em;
+        }
+    }
+
+}
