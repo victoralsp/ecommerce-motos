@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import Logo from './Logo/Logo';
 import NavMenu from './NavMenu/NavMenu';
@@ -6,7 +6,7 @@ import BotaoCatalogo from './BotaoCatalogo/BotaoCatalogo';
 import IconeMenu from './IconeMenu/IconeMenu';
 import { Link } from 'react-router-dom';
 
-export default function Header()  {
+export default function Header( { scrolled } )  {
 
   const [menuAberto, setMenuAberto] = useState(false)
 
@@ -14,23 +14,6 @@ export default function Header()  {
     setMenuAberto(!menuAberto)
   }
 
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-  
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }, [])
 
     const headerClass = `${styles.header} ${scrolled ? styles.headerScrolled : ''}`
     const headerClassContainer = `${styles.headerContainer} ${scrolled ? styles.headerContainerScrolled : ''}`

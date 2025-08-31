@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from './Catalogo.module.scss';
 import Header from "../../components/Shared/Header/Header.jsx";
 import Breadcrumbs from "../../components/Shared/Breadcrumbs/Breadcrumbs.jsx";
@@ -19,11 +19,36 @@ export default function Catalogo() {
 
     const containerCatalogo = `${styles.containerCatalogo} ${menuAberto ? styles.containerCatalogoMenuFechado : ''}`
 
+
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+
+
     return (
         <body className={styles.bodyCatalogo}>  
-            <Header/>
+            <Header 
+                scrolled={scrolled}
+                />
             <main>
-            <Breadcrumbs />
+            <Breadcrumbs 
+                scrolled={scrolled}
+            />
             <ContainerMenuLateral
                 menuAberto={menuAberto}
                 setMenuAberto={setMenuAberto}

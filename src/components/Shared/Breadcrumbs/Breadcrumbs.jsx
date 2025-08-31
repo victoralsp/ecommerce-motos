@@ -2,12 +2,14 @@ import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import styles from './Breadcrumbs.module.scss'; 
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ( { scrolled } ) => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter(x => x);
 
+  const breadcrumbs = `${styles.breadcrumbs} ${scrolled ? styles.breadcrumbsScrolled : ''}`
+
   return (
-    <nav aria-label="breadcrumb" className={styles.breadcrumbs}>
+    <nav aria-label="breadcrumb" className={breadcrumbs}>
       <ol>
         <li>
           <Link to="/" className={styles.homeLink}>Home</Link>
