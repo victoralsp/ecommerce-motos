@@ -1,16 +1,16 @@
 import React  from "react";
 import styles from "./IconeMenuLateral.module.scss";
 // import { useState } from "react";
-import { TbMenuDeep } from "react-icons/tb";
-import { CgClose } from "react-icons/cg";
+import { MdOutlineExpandLess } from "react-icons/md";
 
 export default function IconeMenuLateral({ alterarEstadoMenu, menuAberto }) {
 
+    const btnMenuLateral = `${styles.btnMenuLateral} ${menuAberto ? styles.btnMenuLateralFechado : ''}`
 
     return (
         <>
-            <button className={styles.btnMenuLateral} onClick={alterarEstadoMenu}>
-                {menuAberto ? <TbMenuDeep/> : <CgClose/>}
+            <button className={btnMenuLateral} onClick={alterarEstadoMenu}>
+               <MdOutlineExpandLess/>
             </button>
         </>
     )
