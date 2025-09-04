@@ -6,6 +6,7 @@ import Breadcrumbs from "../../components/Shared/Breadcrumbs/Breadcrumbs.jsx";
 import ContainerMenuLateral from "./components/ContainerMenuLateral/ContainerMenuLateral.jsx";
 import ResultadosEncontrados from "./components/ResultadosEncontrados/ResultadosEncontrados.jsx";
 import InputBuscarMotos from "./components/InputBuscarMotos/InputBuscarMotos.jsx";
+import CardProdutos from "./components/CardProdutos/CardProdutos.jsx";
 import OrdenarPor from "./components/OrdenarPor/OrdenarPor.jsx";
 import { GoHeartFill } from "react-icons/go";
 
@@ -70,6 +71,9 @@ export default function Catalogo() {
                             </div>
                         </div>
                     </div>
+                </section>
+                <section className={styles.containerCardProdutos}> 
+                    <CardProdutos/>
                 </section>
             </section>
             </main>

@@ -1,0 +1,87 @@
+.CardProdutosContainer {
+    width: 320px;
+    height: 420px;
+    border: 1px solid #d4d4d4;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #d4d4d4;
+    overflow: hidden;
+    min-width: 250px;
+    max-width: 350px;
+    flex: 1 1 320px;
+    
+    .btnAddFavoritos {
+        position: absolute;
+        right: 0;
+        background-color: #d4d4d4;
+        border: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 1em;
+        border-radius: 2px;
+    }
+    
+    img {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        height: 200px;
+        background-color: #1f1f1f;
+        aspect-ratio: 16/9;
+        object-fit: contain;
+        overflow: hidden;
+    }
+    
+    .containerInfosMoto {
+        padding: .3em 1em;
+        background-color: #d4d4d4;
+
+        h3 {
+            font-size: 1.3em;
+            margin: .6em 0;
+        }
+
+        .iconeEinfo {
+            display: flex;
+            align-items: center;
+            gap: .4em;
+            margin-bottom: .5em;
+
+            .iconeInfo {
+                font-size: 1.1em;
+                color: black; 
+            }
+
+            p {
+                font-size: 1em;
+                font-weight: normal;
+            }
+        }
+
+        .anoEquilometragem {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .paragrafoPreco {
+            // font-weight: 600;
+            font-size: 1.5em;
+            margin: .5em 0;
+            font-family: 'Lato', sans-serif;
+            font-weight: 800;
+        }
+
+        .btnVerDetalhes {
+            width: 100%;
+            padding: 1.2em;
+            background-color: #141414;
+            border: 1px solid #141414;
+            cursor: pointer;
+            color: #d4d4d4;
+            text-transform: uppercase;
+            font-size: .75em;
+            border-radius: 5px;
+        }
+    }
+}
