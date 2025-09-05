@@ -1,5 +1,4 @@
 .CardProdutosContainer {
-    width: 320px;
     height: 420px;
     border: 1px solid #d4d4d4;
     position: relative;
@@ -8,7 +7,7 @@
     background-color: #d4d4d4;
     overflow: hidden;
     min-width: 250px;
-    max-width: 350px;
+    max-width: 330px;
     flex: 1 1 320px;
     
     .btnAddFavoritos {

@@ -74,6 +74,19 @@ export default function Catalogo() {
                 </section>
                 <section className={styles.containerCardProdutos}> 
                     <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
+                    <CardProdutos/>
                 </section>
             </section>
             </main>
