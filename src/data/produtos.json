@@ -1,94 +1,124 @@
 {
   "produtos": [
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 1,
+      "img_produto": "https://img.olx.com.br/thumbs700x500/46/466538677308006.webp",
       "nome_produto": "Yamaha Fazer FZ25",
+      "marca": "Yamaha",
       "ano_produto": 2024,
       "quilometragem": 1200,
       "cidade_anuncio": "Santo André",
       "uf_anuncio": "SP",
-      "valor": 22500
+      "valor": 22500,
+      "data_publicacao": "2025-09-07T12:00:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 2,
+      "img_produto": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250415/honda-cb-500f-WMIMAGEM15452773684.jpg",
       "nome_produto": "Honda CB 500F",
+      "marca": "Honda",
       "ano_produto": 2023,
       "quilometragem": 5400,
       "cidade_anuncio": "São Bernardo do Campo",
       "uf_anuncio": "SP",
-      "valor": 39800
+      "valor": 39800,
+      "data_publicacao": "2025-09-06T15:30:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 3,
+      "img_produto": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202506/20250612/haojue-dr-160-fi-WMIMAGEM22123711516.jpg",
       "nome_produto": "Haojue DR 160",
+      "marca": "Haojue",
       "ano_produto": 2022,
       "quilometragem": 11500,
       "cidade_anuncio": "São Caetano do Sul",
       "uf_anuncio": "SP",
-      "valor": 16900
+      "valor": 16900,
+      "data_publicacao": "2025-09-05T18:00:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 4,
+      "img_produto": "https://www.motoo.com.br/fotos/2024/5/1280_960/shineray_shi-175-efi_2024_1_22052024_59356_1280_960.jpg",
       "nome_produto": "Shineray SHI 175",
+      "marca": "Shineray",
       "ano_produto": 2024,
       "quilometragem": 800,
       "cidade_anuncio": "Diadema",
       "uf_anuncio": "SP",
-      "valor": 15200
+      "valor": 15200,
+      "data_publicacao": "2025-09-04T09:45:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 5,
+      "img_produto": "https://carsughi.uol.com.br/wp-content/uploads/2024/12/bajaj-dominar-400-ela-ajuda-a-luta-de-mahatma-gandhi-pela-liberdade-das-pessoas.jpg",
       "nome_produto": "Bajaj Dominar 400",
+      "marca": "Bajaj",
       "ano_produto": 2023,
       "quilometragem": 9800,
       "cidade_anuncio": "Mauá",
       "uf_anuncio": "SP",
-      "valor": 27900
+      "valor": 27900,
+      "data_publicacao": "2025-09-03T11:20:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 6,
+      "img_produto": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202509/20250905/yamaha-nmax-160-abs-WMIMAGEM18330387897.jpg",
       "nome_produto": "Yamaha NMAX 160 ABS",
+      "marca": "Yamaha",
       "ano_produto": 2023,
       "quilometragem": 6700,
       "cidade_anuncio": "Santo André",
       "uf_anuncio": "SP",
-      "valor": 21500
+      "valor": 21500,
+      "data_publicacao": "2025-09-02T14:10:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 7,
+      "img_produto": "https://www.litoralcar.com.br/foto-resize/g/1295393/168/honda-cg-160-fan-flex--2025-21273712.webp",
       "nome_produto": "Honda CG 160 Fan",
+      "marca": "Honda",
       "ano_produto": 2022,
       "quilometragem": 25000,
       "cidade_anuncio": "Ribeirão Pires",
       "uf_anuncio": "SP",
-      "valor": 14900
+      "valor": 14900,
+      "data_publicacao": "2025-09-01T17:00:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 8,
+      "img_produto": "https://upload.wikimedia.org/wikipedia/commons/d/df/BAJAJ_Pulsar_NS160.jpg",
       "nome_produto": "Bajaj Pulsar NS 160",
+      "marca": "Bajaj",
       "ano_produto": 2024,
       "quilometragem": 1500,
       "cidade_anuncio": "São Bernardo do Campo",
       "uf_anuncio": "SP",
-      "valor": 17800
+      "valor": 17800,
+      "data_publicacao": "2025-08-31T10:55:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 9,
+      "img_produto": "https://i.ytimg.com/vi/fgfiVBInB0E/maxresdefault.jpg",
       "nome_produto": "Haojue DK 150",
+      "marca": "Haojue",
       "ano_produto": 2021,
       "quilometragem": 31000,
       "cidade_anuncio": "Rio Grande da Serra",
       "uf_anuncio": "SP",
-      "valor": 12800
+      "valor": 12800,
+      "data_publicacao": "2025-08-30T13:40:00Z"
     },
     {
-      "img_produto": "https://img.odcdn.com.br/wp-content/uploads/2023/12/Ziggymoto.png",
+      "id": 10,
+      "img_produto": "https://www.arautomotos.com.br/uploads/motosseminovas/ft31-03-2023_160930_fotoLatDireita.jpeg",
       "nome_produto": "Honda XRE 300",
+      "marca": "Honda",
       "ano_produto": 2023,
       "quilometragem": 4500,
       "cidade_anuncio": "Santo André",
       "uf_anuncio": "SP",
-      "valor": 28500
+      "valor": 28500,
+      "data_publicacao": "2025-08-29T16:25:00Z"
     }
   ]
 }

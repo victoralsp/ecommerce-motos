@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import styles from './Catalogo.module.scss';
+import styles from "./Catalogo.module.scss";
 import Header from "../../components/Shared/Header/Header.jsx";
 import Breadcrumbs from "../../components/Shared/Breadcrumbs/Breadcrumbs.jsx";
 import ContainerMenuLateral from "./components/ContainerMenuLateral/ContainerMenuLateral.jsx";
@@ -8,94 +8,106 @@ import ResultadosEncontrados from "./components/ResultadosEncontrados/Resultados
 import InputBuscarMotos from "./components/InputBuscarMotos/InputBuscarMotos.jsx";
 import CardProdutos from "./components/CardProdutos/CardProdutos.jsx";
 import OrdenarPor from "./components/OrdenarPor/OrdenarPor.jsx";
-import DadosProdutos from "../../data/produtos.json"
+import DadosProdutos from "../../data/produtos.json";
 import { GoHeartFill } from "react-icons/go";
 
 export default function Catalogo() {
+  const [menuAberto, setMenuAberto] = useState(false);
+  const [termoBusca, setTermoBusca] = useState("");
+  const [produtosExibidos, setProdutosExibidos] = useState(
+    DadosProdutos.produtos
+  );
+//   console.log(produtosExibidos);
 
-    const [menuAberto, setMenuAberto] = useState(false)
+  const alternarMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
 
-    const alternarMenu = () => {
-        setMenuAberto(!menuAberto)
-    }
+  const containerCatalogo = `${styles.containerCatalogo} ${
+    menuAberto ? styles.containerCatalogoMenuFechado : ""
+  }`;
 
-    const containerCatalogo = `${styles.containerCatalogo} ${menuAberto ? styles.containerCatalogoMenuFechado : ''}`
+  const [scrolled, setScrolled] = useState(false);
 
-
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-      const handleScroll = () => {
-        if (window.scrollY > 0) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
-      };
-
-      window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
-
-
-    const formatarValor = (valor) => {
-        return new Intl.NumberFormat('pt-BR', {
-            style: 'currency',
-            currency: 'BRL',
-            minimumFractionDigits: 2,
-        }).format(valor);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
 
+    window.addEventListener("scroll", handleScroll);
 
-    console.log(DadosProdutos.produtos.length)
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-    return (
-        <body className={styles.bodyCatalogo}>  
-            <Header 
-                scrolled={scrolled}
+  const formatarValor = (valor) => {
+    return new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+      minimumFractionDigits: 2,
+    }).format(valor);
+  };
+
+  // Lógica de filtro por termo de busca
+  useEffect(() => {
+    const produtosFiltrados = DadosProdutos.produtos.filter((produto) => {
+      const nomeProduto = produto.nome_produto.toLowerCase();
+      const marcaProduto = produto.marca.toLowerCase();
+      const busca = termoBusca.toLowerCase();
+      return nomeProduto.includes(busca) || marcaProduto.includes(busca);
+    });
+    setProdutosExibidos(produtosFiltrados);
+  }, [termoBusca]);
+
+  return (
+    <div className={styles.bodyCatalogo}>
+      <Header scrolled={scrolled} />
+      <main>
+        <Breadcrumbs scrolled={scrolled} />
+        <ContainerMenuLateral
+          menuAberto={menuAberto}
+          setMenuAberto={setMenuAberto}
+          alternarMenu={alternarMenu}
+        />
+        <section className={containerCatalogo}>
+          <section className={styles.catalogoControles}>
+            <div className={styles.qtdEncontradosEFiltrarPor}>
+              <div className={styles.containerFiltrosEsquerda}>
+                <ResultadosEncontrados
+                  lengthDadosProdutos={DadosProdutos.produtos.length}
                 />
-            <main>
-            <Breadcrumbs 
-                scrolled={scrolled}
-            />
-            <ContainerMenuLateral
-                menuAberto={menuAberto}
-                setMenuAberto={setMenuAberto}
-                alternarMenu={alternarMenu}
-            />
-            <section className={containerCatalogo}>
-                <section className={styles.catalogoControles}>
-                    <div className={styles.qtdEncontradosEFiltrarPor}>
-                        <div className={styles.containerFiltrosEsquerda}>
-                            <ResultadosEncontrados
-                                lengthDadosProdutos = {DadosProdutos.produtos.length}
-                            />
-                            <span>/</span>
-                            <OrdenarPor/>
-                        </div>
-                        <div className={styles.containerFiltrosDireita}>
-                            <InputBuscarMotos/>
-                            <div className={styles.containerFavoritos}>
-                                <GoHeartFill className={styles.iconeFavoritos}/>
-                                <p>1</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className={styles.containerCardProdutos}> 
-                    {DadosProdutos.produtos.map(produto => (
-                        <CardProdutos
-                            infosProduto = {produto}
-                            formatarValor = {formatarValor}
-                        />
-                    ))}
-                </section>
-            </section>
-            </main>
-            
-        </body>
-    )
+                <span>/</span>
+                <OrdenarPor />
+              </div>
+              <div className={styles.containerFiltrosDireita}>
+                <InputBuscarMotos setTermoBusca={setTermoBusca} />
+                <div className={styles.containerFavoritos}>
+                  <GoHeartFill className={styles.iconeFavoritos} />
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className={styles.containerCardProdutos}>
+            {produtosExibidos.length > 0 ? (
+              produtosExibidos.map((produto) => (
+                <CardProdutos
+                  key={produto.id}
+                  infosProduto={produto}
+                  formatarValor={formatarValor}
+                />
+              ))
+            ) : (
+              <p className={styles.erroNenhumAnuncioEncontrado}>Nenhum anúncio encontrado</p>
+            )}
+          </section>
+        </section>
+      </main>
+    </div>
+  );
 }

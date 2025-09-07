@@ -6,9 +6,9 @@ import styles from "./Home.module.scss";
 export default function Home() {
 
     return (
-        <body className={styles.bodyHome}>
+        <div className={styles.bodyHome}>
             <Header/>
             <Main/>
-        </body>
+        </div>
     )
 }

@@ -9,13 +9,13 @@ export default function Logo({width = "100px"})  {
     }
 
   return (
-    <a href="/" className={styles.logoContainer} style={logoStyleWidth}>
+    <div href="/" className={styles.logoContainer} style={logoStyleWidth}>
       <img 
         src={logoIcon} 
         alt="Logo da Loja" 
         className={styles.logoImage} 
       />
-    </a>
+    </div>
   );
 };
 
