@@ -18,9 +18,11 @@ export default function CardProdutos( { infosProduto, formatarValor } ) {
     
     return (
         <>
-            <article className={styles.CardProdutosContainer}>
+            <article className={styles.CardProduto}>
                 <button className={styles.btnAddFavoritos}><GoHeartFill/></button>
-                <img src={infosProduto.img_produto} alt="Imagem da moto" />
+                <div className={styles.containerImagemProduto}>
+                    <img src={infosProduto.img_produto} alt="Imagem da moto" />
+                </div>
                     <div className={styles.containerInfosMoto}>
                         <h3>{limitarTexto(infosProduto.nome_produto, 20)}</h3>
                         <div className={styles.anoEquilometragem}>

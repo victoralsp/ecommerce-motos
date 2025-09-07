@@ -13,10 +13,8 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 1.5em;
-        // border: 1px solid white;
         transition: 1s ease;
         
-
         .qtdEncontradosEFiltrarPor {
             font-family: "Montserrat", sans-serif;
             display: flex;
@@ -61,16 +59,16 @@
                     font-weight: 800;
                 }
             }
-            
         }
 
         .containerCardProdutos {
-            // border: 1px solid red;
             display: flex;
             flex-wrap: wrap;
             gap: 2em;
             justify-content: flex-start;
             padding: .5em 0;
+
+            
 
             .erroNenhumAnuncioEncontrado {
                 color: rgb(161, 40, 40);
