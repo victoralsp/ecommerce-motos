@@ -1,5 +1,5 @@
 .CardProdutosContainer {
-    height: 420px;
+    height: 430px;
     border: 1px solid #d4d4d4;
     position: relative;
     border-radius: 5px;
@@ -25,11 +25,11 @@
     img {
         border-radius: 5px 5px 0 0;
         width: 100%;
-        height: 200px;
+        min-height: 200px;
         background-color: #1f1f1f;
         aspect-ratio: 16/9;
-        object-fit: contain;
-        overflow: hidden;
+        object-fit: cover;
+        // overflow: hidden;
     }
     
     .containerInfosMoto {
@@ -39,6 +39,7 @@
         h3 {
             font-size: 1.3em;
             margin: .6em 0;
+            overflow-x: hidden;
         }
 
         .iconeEinfo {
@@ -66,7 +67,7 @@
         .paragrafoPreco {
             // font-weight: 600;
             font-size: 1.5em;
-            margin: .5em 0;
+            margin: .5em 0 .7em 0;
             font-family: 'Lato', sans-serif;
             font-weight: 800;
         }

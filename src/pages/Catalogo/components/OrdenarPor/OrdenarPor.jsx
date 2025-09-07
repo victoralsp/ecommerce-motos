@@ -14,7 +14,7 @@ export default function OrdenarPor () {
                     <option value="maisRelevantes">Mais relevantes</option>
                     <option value="menorPreco">Menor preço</option>
                     <option value="maiorPreco">Maior preço</option>
-                    <option value="maisRecentes">Recentes</option>
+                    <option value="maisRecentes">Mais recentes</option>
                 </select>
             </label>
         </div>

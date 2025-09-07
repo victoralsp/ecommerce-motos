@@ -8,6 +8,7 @@ import ResultadosEncontrados from "./components/ResultadosEncontrados/Resultados
 import InputBuscarMotos from "./components/InputBuscarMotos/InputBuscarMotos.jsx";
 import CardProdutos from "./components/CardProdutos/CardProdutos.jsx";
 import OrdenarPor from "./components/OrdenarPor/OrdenarPor.jsx";
+import DadosProdutos from "../../data/produtos.json"
 import { GoHeartFill } from "react-icons/go";
 
 export default function Catalogo() {
@@ -19,7 +20,6 @@ export default function Catalogo() {
     }
 
     const containerCatalogo = `${styles.containerCatalogo} ${menuAberto ? styles.containerCatalogoMenuFechado : ''}`
-
 
 
     const [scrolled, setScrolled] = useState(false);
@@ -41,6 +41,17 @@ export default function Catalogo() {
     }, []);
 
 
+    const formatarValor = (valor) => {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2,
+        }).format(valor);
+    };
+
+
+    console.log(DadosProdutos.produtos.length)
+
     return (
         <body className={styles.bodyCatalogo}>  
             <Header 
@@ -59,7 +70,9 @@ export default function Catalogo() {
                 <section className={styles.catalogoControles}>
                     <div className={styles.qtdEncontradosEFiltrarPor}>
                         <div className={styles.containerFiltrosEsquerda}>
-                            <ResultadosEncontrados/>
+                            <ResultadosEncontrados
+                                lengthDadosProdutos = {DadosProdutos.produtos.length}
+                            />
                             <span>/</span>
                             <OrdenarPor/>
                         </div>
@@ -73,20 +86,12 @@ export default function Catalogo() {
                     </div>
                 </section>
                 <section className={styles.containerCardProdutos}> 
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
-                    <CardProdutos/>
+                    {DadosProdutos.produtos.map(produto => (
+                        <CardProdutos
+                            infosProduto = {produto}
+                            formatarValor = {formatarValor}
+                        />
+                    ))}
                 </section>
             </section>
             </main>
