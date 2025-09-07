@@ -22,7 +22,7 @@ export default function CardProdutos() {
                             </div>
                             <div className={styles.iconeEinfo}>
                                 <PiSpeedometerLight className={styles.iconeInfo}/>
-                                <p>quilometragem KM</p>
+                                <p>000 KM</p>
                             </div>
                         </div>
                             <div className={styles.iconeEinfo}>
