@@ -10,6 +10,7 @@ import CardProdutos from "./components/CardProdutos/CardProdutos.jsx";
 import OrdenarPor from "./components/OrdenarPor/OrdenarPor.jsx";
 import DadosProdutos from "../../data/produtos.json";
 import { GoHeartFill } from "react-icons/go";
+import bannerHero from '../../assets/imagens/bannerHero.png';
 
 export default function Catalogo() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -63,6 +64,7 @@ export default function Catalogo() {
   return (
     <div className={styles.bodyCatalogo}>
       <Header scrolled={scrolled} />
+      <img src={bannerHero} alt="banner de uma moto" className={styles.bannerHero}/>
       <main className={styles.mainCatalogo}>
         <Breadcrumbs scrolled={scrolled} />
         <div className={styles.containerSectionMenuCatalogo}>

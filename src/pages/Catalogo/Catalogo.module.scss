@@ -1,6 +1,11 @@
 .bodyCatalogo {
     overflow-x: hidden;
 
+    .bannerHero {
+        width: 100%;
+        height: auto;
+    }
+
     .mainCatalogo {
         max-width: 1800px;
         margin: 7em auto 0;
