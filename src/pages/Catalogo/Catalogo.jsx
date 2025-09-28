@@ -23,10 +23,6 @@ export default function Catalogo() {
     setMenuAberto(!menuAberto);
   };
 
-  const containerCatalogo = `${styles.containerCatalogo} ${
-    menuAberto ? styles.containerCatalogoMenuFechado : ""
-  }`;
-
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -67,46 +63,48 @@ export default function Catalogo() {
   return (
     <div className={styles.bodyCatalogo}>
       <Header scrolled={scrolled} />
-      <main>
+      <main className={styles.mainCatalogo}>
         <Breadcrumbs scrolled={scrolled} />
-        <ContainerMenuLateral
-          menuAberto={menuAberto}
-          setMenuAberto={setMenuAberto}
-          alternarMenu={alternarMenu}
-        />
-        <section className={containerCatalogo}>
-          <section className={styles.catalogoControles}>
-            <div className={styles.qtdEncontradosEFiltrarPor}>
-              <div className={styles.containerFiltrosEsquerda}>
-                <ResultadosEncontrados
-                  lengthDadosProdutos={DadosProdutos.produtos.length}
-                />
-                <span>/</span>
-                <OrdenarPor />
-              </div>
-              <div className={styles.containerFiltrosDireita}>
-                <InputBuscarMotos setTermoBusca={setTermoBusca} />
-                <div className={styles.containerFavoritos}>
-                  <GoHeartFill className={styles.iconeFavoritos} />
-                  <p>1</p>
+        <div className={styles.containerSectionMenuCatalogo}>
+          <ContainerMenuLateral
+            menuAberto={menuAberto}
+            setMenuAberto={setMenuAberto}
+            alternarMenu={alternarMenu}
+          />
+          <section className={styles.containerCatalogo}>
+            <section className={styles.catalogoControles}>
+              <div className={styles.qtdEncontradosEFiltrarPor}>
+                <div className={styles.containerFiltrosEsquerda}>
+                  <ResultadosEncontrados
+                    lengthDadosProdutos={DadosProdutos.produtos.length}
+                  />
+                  <span>/</span>
+                  <OrdenarPor />
+                </div>
+                <div className={styles.containerFiltrosDireita}>
+                  <InputBuscarMotos setTermoBusca={setTermoBusca} />
+                  <div className={styles.containerFavoritos}>
+                    <GoHeartFill className={styles.iconeFavoritos} />
+                    <p>1</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </section>
+            <section className={styles.containerCardProdutos}>
+              {produtosExibidos.length > 0 ? (
+                produtosExibidos.map((produto) => (
+                  <CardProdutos
+                    key={produto.id}
+                    infosProduto={produto}
+                    formatarValor={formatarValor}
+                  />
+                ))
+              ) : (
+                <p className={styles.erroNenhumAnuncioEncontrado}>Nenhum anúncio encontrado</p>
+              )}
+            </section>
           </section>
-          <section className={styles.containerCardProdutos}>
-            {produtosExibidos.length > 0 ? (
-              produtosExibidos.map((produto) => (
-                <CardProdutos
-                  key={produto.id}
-                  infosProduto={produto}
-                  formatarValor={formatarValor}
-                />
-              ))
-            ) : (
-              <p className={styles.erroNenhumAnuncioEncontrado}>Nenhum anúncio encontrado</p>
-            )}
-          </section>
-        </section>
+        </div>
       </main>
     </div>
   );

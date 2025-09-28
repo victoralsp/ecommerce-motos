@@ -1,17 +1,14 @@
 .containerMenuLateral {
-    width: 20%;
-    height: 85vh;
-    border: 1px solid rgba(255, 255, 255, 0);
+    width: 30%;
+    height: fit-content;
+    max-height: 750px;
     color: #d4d4d4;
-    background: linear-gradient(to right, #141414 0%, #0e0e0e 100%);
     border-radius: 0 10px 0 0;
-    position: fixed;
     bottom: 0;
     transition: 1s ease;
-    z-index: 99999999999;
 
     .widthControllerMenuLateral {
-        width: 85%;
+        width: 90%;
         margin: 1.5em auto;
         flex-direction: column;
         opacity: 1;
@@ -22,7 +19,7 @@
     .widthControllerMenuLateralFechado {
         opacity: 0;
         pointer-events: none;
-        transform: translateX(-150%);
+        transform: translateX(-100%);
     }
 
     h3 {
@@ -34,37 +31,7 @@
 }
 
 .containerMenuLateralFechado {
-    width: 4%;
+    width: 4.5%;
 }
 
 
-
-
-
-
-
-// .containerMenuLateral {
-//     width: 450px;
-//     height: 85vh;
-//     border: 1px solid rgba(255, 255, 255, 0);
-//     color: #d4d4d4;
-//     background: linear-gradient(to right, #141414 0%, #0e0e0e 100%);
-//     border-radius: 10px;
-//     position: fixed;
-//     bottom: 0;
-
-//     .widthControllerMenuLateral {
-//         width: 85%;
-//         margin: 2.063em auto;
-//         display: flex;
-//         flex-direction: column;
-
-//     }
-
-//     h3 {
-//         font-size: 1.4rem;
-//         letter-spacing: .5px;
-//         margin: 0 0 .5em 0;
-//         font-family: "Montserrat", sans-serif;
-//     }
-// }
