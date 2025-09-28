@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.overflow-hidden-home {
+  overflow: hidden !important;
+}
+
 body {
     background-color: #141414;
+    overflow: auto;
 }
