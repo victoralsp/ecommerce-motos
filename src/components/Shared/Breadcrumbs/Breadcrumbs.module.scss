@@ -5,7 +5,7 @@
     padding: 1.1em 0;
     // position: fixed;
     top: 5.4em;
-    background-color: #141414;
+    background-color: var(--dark-color-padrao);
     
     ol {
         display: flex;
@@ -18,12 +18,12 @@
         }
         
         .pagAtual {
-            color: #d4d4d4;
+            color: var(--light-color-padrao);
         }
     }
 }
 
 .breadcrumbsScrolled {
-    background: linear-gradient(to right, #141414 0%, #0e0e0e 100%);
+    background: linear-gradient(to right, var(--dark-color-padrao) 0%, #0e0e0e 100%);
     box-shadow: 1px 1px 8px #d4d4d40e;
 }

@@ -45,7 +45,7 @@
         }
         
         .dotAtivo {
-            background-color: #d4d4d4;
+            background-color: var(--light-color-padrao);
             color: white;
             width: 40px;
             height: 23px;
@@ -92,7 +92,7 @@
         }
 
         .dotAtivo {
-            background-color: #d4d4d4;
+            background-color: var(--light-color-padrao);
             color: white;
             width: 35px;
             height: 20px;

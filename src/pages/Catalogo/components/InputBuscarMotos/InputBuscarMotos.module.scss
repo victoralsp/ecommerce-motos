@@ -5,7 +5,7 @@
         align-items: center; 
         width: 100%;
         height: 45px;
-        background-color: #141414;
+        background-color: var(--dark-color-padrao);
         border: 2px solid #fff;
         border-radius: 500px;
         position: relative; 
@@ -16,7 +16,7 @@
         width: 100%; 
         background-color: transparent; 
         border: none; 
-        color: #d4d4d4;
+        color: var(--light-color-padrao);
         font-size: 1em;
         padding: 0; 
         outline: none;
@@ -31,8 +31,8 @@
         transform: translateY(2px);
     }
 
-    ::-webkit-input-placeholder  { color:#d4d4d4; }
-    input:-moz-placeholder { color:#d4d4d4; }
-    textarea:-moz-placeholder { color:#d4d4d4; }
+    ::-webkit-input-placeholder  { color:var(--light-color-padrao); }
+    input:-moz-placeholder { color:var(--light-color-padrao); }
+    textarea:-moz-placeholder { color:var(--light-color-padrao); }
 
 }
