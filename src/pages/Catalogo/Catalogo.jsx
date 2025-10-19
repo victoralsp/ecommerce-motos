@@ -10,7 +10,7 @@ import CardProdutos from "./components/CardProdutos/CardProdutos.jsx";
 import OrdenarPor from "./components/OrdenarPor/OrdenarPor.jsx";
 import DadosProdutos from "../../data/produtos.json";
 import { GoHeartFill } from "react-icons/go";
-import bannerHero from '../../assets/imagens/bannerHero.png';
+import HeroBannerImagem from '../../assets/imagens/heroBannerImg.png';
 
 export default function Catalogo() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -64,49 +64,55 @@ export default function Catalogo() {
   return (
     <div className={styles.bodyCatalogo}>
       <Header scrolled={scrolled} />
-      <img src={bannerHero} alt="banner de uma moto" className={styles.bannerHero}/>
       <main className={styles.mainCatalogo}>
-        <Breadcrumbs scrolled={scrolled} />
-        <div className={styles.containerSectionMenuCatalogo}>
-          <ContainerMenuLateral
-            menuAberto={menuAberto}
-            setMenuAberto={setMenuAberto}
-            alternarMenu={alternarMenu}
-          />
-          <section className={styles.containerCatalogo}>
-            <section className={styles.catalogoControles}>
-              <div className={styles.qtdEncontradosEFiltrarPor}>
-                <div className={styles.containerFiltrosEsquerda}>
-                  <ResultadosEncontrados
-                    lengthDadosProdutos={DadosProdutos.produtos.length}
-                  />
-                  <span>/</span>
-                  <OrdenarPor />
-                </div>
-                <div className={styles.containerFiltrosDireita}>
-                  <InputBuscarMotos setTermoBusca={setTermoBusca} />
-                  <div className={styles.containerFavoritos}>
-                    <GoHeartFill className={styles.iconeFavoritos} />
-                    <p>1</p>
+        <div className={styles.heroBannerContainer}>
+          <img src={HeroBannerImagem} alt="hero banner" className={styles.heroBannerImagem} />
+        </div>
+        <section className={styles.containerPageMain}>
+          <Breadcrumbs scrolled={scrolled} />
+          <div className={styles.containerSectionMenuCatalogo}>
+            <ContainerMenuLateral
+              menuAberto={menuAberto}
+              setMenuAberto={setMenuAberto}
+              alternarMenu={alternarMenu}
+            />
+            <section className={styles.containerCatalogo}>
+              <div className={styles.containerFiltroCards}>
+                <section className={styles.catalogoControles}>
+                  <div className={styles.qtdEncontradosEFiltrarPor}>
+                    <div className={styles.containerFiltrosEsquerda}>
+                      <ResultadosEncontrados
+                        lengthDadosProdutos={DadosProdutos.produtos.length}
+                      />
+                      <span>/</span>
+                      <OrdenarPor />
+                    </div>
+                    <div className={styles.containerFiltrosDireita}>
+                      <InputBuscarMotos setTermoBusca={setTermoBusca} />
+                      <div className={styles.containerFavoritos}>
+                        <GoHeartFill className={styles.iconeFavoritos} />
+                        <p>1</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </section>
+                <section className={styles.containerCardProdutos}>
+                  {produtosExibidos.length > 0 ? (
+                    produtosExibidos.map((produto) => (
+                      <CardProdutos
+                        key={produto.id}
+                        infosProduto={produto}
+                        formatarValor={formatarValor}
+                      />
+                    ))
+                  ) : (
+                    <p className={styles.erroNenhumAnuncioEncontrado}>Nenhum anúncio encontrado</p>
+                  )}
+                </section>
               </div>
             </section>
-            <section className={styles.containerCardProdutos}>
-              {produtosExibidos.length > 0 ? (
-                produtosExibidos.map((produto) => (
-                  <CardProdutos
-                    key={produto.id}
-                    infosProduto={produto}
-                    formatarValor={formatarValor}
-                  />
-                ))
-              ) : (
-                <p className={styles.erroNenhumAnuncioEncontrado}>Nenhum anúncio encontrado</p>
-              )}
-            </section>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
     </div>
   );

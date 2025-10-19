@@ -1,14 +1,13 @@
 .bodyCatalogo {
     overflow-x: hidden;
 
-    .bannerHero {
-        width: 100%;
-        height: auto;
+    .mainCatalogo {
+        // max-width: 1800px;
+        margin: 5.6em auto 0;
     }
 
-    .mainCatalogo {
-        max-width: 1800px;
-        margin: 7em auto 0;
+    .containerPageMain {
+        padding: 0 2em;
     }
 
     .containerSectionMenuCatalogo {
@@ -28,9 +27,14 @@
         gap: 1.5em;
         transition: 1s ease;
 
-        .catalogoControles {
-            width: 95%;
+        .containerFiltroCards {
+            width: 95%; 
             margin-left: auto;
+        }
+
+        .catalogoControles {
+            width: 100%;
+            margin: 0 0 1.5em 0;
         }
         
         .qtdEncontradosEFiltrarPor {
@@ -83,10 +87,11 @@
         .containerCardProdutos {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: left;
             padding: .5em 0;
-            width: 95%;
-            margin-left: auto;
+            // width: 95%;
+            // margin-left: auto;
+            gap: 2em;
 
             
 
@@ -95,6 +100,16 @@
                 font-family: 'Lato', sans-serif;
                 font-size: 1.1em; 
             }
+        }
+    }
+
+    .heroBannerContainer {
+        width: 100%;
+        margin: 0 auto 1em auto;
+
+        .heroBannerImagem {
+            width: 100%; 
+            height: auto;
         }
     }
 }

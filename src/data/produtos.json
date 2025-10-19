@@ -119,6 +119,18 @@
       "uf_anuncio": "SP",
       "valor": 28500,
       "data_publicacao": "2025-08-29T16:25:00Z"
+    },
+    {
+      "id": 11,
+      "img_produto": "https://cdn.motor1.com/images/mgl/zxA3P0/505:0:3023:2268/nova-bajaj-pulsar-n150.webp",
+      "nome_produto": "Pulsar N150",
+      "marca": "Bajaj",
+      "ano_produto": 2025,
+      "quilometragem": 0,
+      "cidade_anuncio": "Mauá",
+      "uf_anuncio": "SP",
+      "valor": 16300,
+      "data_publicacao": "2025-10-19T14:35:00Z"
     }
   ]
 }
