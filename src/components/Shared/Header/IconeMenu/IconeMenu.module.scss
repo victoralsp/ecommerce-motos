@@ -1,4 +1,4 @@
-.IconeMenu {
+.styleIconeMenu {
     font-size: 1.8em;
     background-color: transparent;
     border: none;
@@ -8,7 +8,11 @@
 }
 
 @media screen and (max-width: 600px){
-    .IconeMenu {
+    .styleIconeMenu {
         display: block;
     }
+}
+
+.styleScrolledIconeMenu {
+    color: var(--dark-color-padrao);
 }

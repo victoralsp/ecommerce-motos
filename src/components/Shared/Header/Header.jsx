@@ -22,11 +22,23 @@ export default function Header( { scrolled } )  {
     <header className={headerClass}>
         <div className={headerClassContainer}>
           <Link to="/">
-            <Logo width="70px"/>
+            <Logo 
+              width="70px"
+                changeScrolled={scrolled}
+              />
           </Link>
-          <NavMenu isOpen={menuAberto}/>
-          <BotaoCatalogo/>
-          <IconeMenu onToggleMenu={toggleMenu} isOpen={menuAberto}/>
+          <NavMenu 
+            isOpen={menuAberto}
+            styleScrolled={scrolled}
+            />
+          <BotaoCatalogo
+            styleScrolled={scrolled}
+          />
+          <IconeMenu 
+          onToggleMenu={toggleMenu} 
+          isOpen={menuAberto}
+          styleScrolled={scrolled}
+          />
         </div>
       </header>
   );

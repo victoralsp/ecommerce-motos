@@ -10,7 +10,8 @@
       "cidade_anuncio": "Santo André",
       "uf_anuncio": "SP",
       "valor": 22500,
-      "data_publicacao": "2025-09-07T12:00:00Z"
+      "data_publicacao": "2025-09-07T12:00:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
       "cidade_anuncio": "São Bernardo do Campo",
       "uf_anuncio": "SP",
       "valor": 39800,
-      "data_publicacao": "2025-09-06T15:30:00Z"
+      "data_publicacao": "2025-09-06T15:30:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "cidade_anuncio": "São Caetano do Sul",
       "uf_anuncio": "SP",
       "valor": 16900,
-      "data_publicacao": "2025-09-05T18:00:00Z"
+      "data_publicacao": "2025-09-05T18:00:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 4,
@@ -46,7 +49,8 @@
       "cidade_anuncio": "Diadema",
       "uf_anuncio": "SP",
       "valor": 15200,
-      "data_publicacao": "2025-09-04T09:45:00Z"
+      "data_publicacao": "2025-09-04T09:45:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 5,
@@ -58,7 +62,8 @@
       "cidade_anuncio": "Mauá",
       "uf_anuncio": "SP",
       "valor": 27900,
-      "data_publicacao": "2025-09-03T11:20:00Z"
+      "data_publicacao": "2025-09-03T11:20:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 6,
@@ -70,7 +75,8 @@
       "cidade_anuncio": "Santo André",
       "uf_anuncio": "SP",
       "valor": 21500,
-      "data_publicacao": "2025-09-02T14:10:00Z"
+      "data_publicacao": "2025-09-02T14:10:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 7,
@@ -82,7 +88,8 @@
       "cidade_anuncio": "Ribeirão Pires",
       "uf_anuncio": "SP",
       "valor": 14900,
-      "data_publicacao": "2025-09-01T17:00:00Z"
+      "data_publicacao": "2025-09-01T17:00:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 8,
@@ -94,7 +101,8 @@
       "cidade_anuncio": "São Bernardo do Campo",
       "uf_anuncio": "SP",
       "valor": 17800,
-      "data_publicacao": "2025-08-31T10:55:00Z"
+      "data_publicacao": "2025-08-31T10:55:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 9,
@@ -106,7 +114,8 @@
       "cidade_anuncio": "Rio Grande da Serra",
       "uf_anuncio": "SP",
       "valor": 12800,
-      "data_publicacao": "2025-08-30T13:40:00Z"
+      "data_publicacao": "2025-08-30T13:40:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 10,
@@ -118,7 +127,8 @@
       "cidade_anuncio": "Santo André",
       "uf_anuncio": "SP",
       "valor": 28500,
-      "data_publicacao": "2025-08-29T16:25:00Z"
+      "data_publicacao": "2025-08-29T16:25:00Z",
+      "estado_produto": "usado"
     },
     {
       "id": 11,
@@ -130,7 +140,8 @@
       "cidade_anuncio": "Mauá",
       "uf_anuncio": "SP",
       "valor": 16300,
-      "data_publicacao": "2025-10-19T14:35:00Z"
+      "data_publicacao": "2025-10-19T14:35:00Z",
+      "estado_produto": "novo"
     }
   ]
 }

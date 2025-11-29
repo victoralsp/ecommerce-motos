@@ -1,19 +1,23 @@
 import React from 'react';
 import styles from './Logo.module.scss';
-import logoIcon from '../../../../assets/icones/logoUrbanDrive.png';
+import logoIconWhite from '../../../../assets/icones/logoUrbanDrive.png';
+import logoIconBlack from '../../../../assets/icones/logoUrbanDriveBlack.png';
 
-export default function Logo({width = "100px"})  {
+export default function Logo({ width = "100px", changeScrolled })  {
 
     const logoStyleWidth = {
         width: width
     }
 
+    const logoUrl = changeScrolled ? logoIconBlack : logoIconWhite
+    const logoStyle = changeScrolled ? styles.logoImageScrolled : styles.logoImage
+
   return (
     <div href="/" className={styles.logoContainer} style={logoStyleWidth}>
       <img 
-        src={logoIcon} 
+        src={logoUrl} 
         alt="Logo da Loja" 
-        className={styles.logoImage} 
+        className={logoStyle} 
       />
     </div>
   );

@@ -8,9 +8,9 @@ import FiltrarMinimoMaximo from "../FiltrarMinimoMaximo/FiltrarMinimoMaximo";
 import FiltrarPorMarcas from "../FiltrarPorMarcas/FiltrarPorMarcas";
 
 
-export default function ContainerMenuLateral({ menuAberto, setMenuAberto, alternarMenu }) {
+export default function ContainerMenuLateral({ menuAberto, setMenuAberto, alternarMenu, dadosProdutos, setFiltroNovas, setFiltroUsadas }) {
 
-
+    // console.log(dadosProdutos)
     const containerMenuLateral = `${styles.containerMenuLateral} ${menuAberto ? styles.containerMenuLateralFechado : ''}`
     const widthControllerMenu = `${styles.widthControllerMenuLateral} ${menuAberto ? styles.widthControllerMenuLateralFechado : ''}`
 
@@ -24,7 +24,11 @@ export default function ContainerMenuLateral({ menuAberto, setMenuAberto, altern
                 />
             <div className={widthControllerMenu}>
                 <BuscarLocalizacao/>
-                <OpcaoNovaOuUsada/>
+                <OpcaoNovaOuUsada
+                    dadosProdutos={dadosProdutos}
+                    setFiltroNovas={setFiltroNovas}
+                    setFiltroUsadas={setFiltroUsadas}
+                />
                 <FiltrarMinimoMaximo
                     funcaoSubtitulo='Preço' 
                     nomeIntervaloMinimo='Preço mínimo' 
