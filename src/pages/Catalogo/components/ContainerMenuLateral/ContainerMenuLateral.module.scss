@@ -35,3 +35,24 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+    .containerMenuLateral {
+        width: 100% !important;
+    }
+    .widthControllerMenuLateral {
+        width: 100% !important;
+        height: 1000px;
+        transition: .5s ease-out !important;
+    }
+    .widthControllerMenuLateralFechado {
+        height: 0;
+        transform: translateX(0) !important;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .containerMenuLateral {
+        width: 50%;
+    }
+}
+

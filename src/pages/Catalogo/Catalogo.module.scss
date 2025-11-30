@@ -114,3 +114,36 @@
     }
 
 }
+
+@media screen and (max-width: 768px) {
+    .containerCardProdutos {
+        justify-content: center !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .containerSectionMenuCatalogo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerCatalogo {
+        border-left: none !important;
+    }
+
+    .qtdEncontradosEFiltrarPor {
+            display: flex;
+            
+            .containerFiltrosDireita, 
+            .containerFiltrosEsquerda {
+                gap: 1em !important;
+                font-size: .9em !important;
+            }
+
+            span {
+                font-size: 1.2em;
+            }
+    }
+
+    .containerFiltroCards {
+        width: 100% !important;
+    }
+}
