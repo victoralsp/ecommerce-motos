@@ -36,3 +36,11 @@
     textarea:-moz-placeholder { color:var(--light-color-padrao); }
 
 }
+
+@media screen and  (max-width: 1367px) {
+    .InputBuscarMotos {
+        input {
+            padding-right: 6em;
+        }
+    }
+}

@@ -130,8 +130,8 @@
     }
 
     .qtdEncontradosEFiltrarPor {
-            display: flex;
-            
+        margin: 0 0 4em 0;
+
             .containerFiltrosDireita, 
             .containerFiltrosEsquerda {
                 gap: 1em !important;
@@ -145,5 +145,18 @@
 
     .containerFiltroCards {
         width: 100% !important;
+    }
+}
+
+@media screen and  (max-width: 1367px) {
+    .qtdEncontradosEFiltrarPor {
+        margin: 0 0 4em 0;
+        flex-direction: column !important;
+        gap: 2em;
+    }
+
+    .containerFiltrosDireita {
+        width: 100%;
+        justify-content: center;
     }
 }
